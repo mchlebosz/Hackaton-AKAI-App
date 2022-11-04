@@ -1,6 +1,8 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 
+import "mdb-vue-ui-kit/css/mdb.min.css";
+
 import "bootstrap/dist/css/bootstrap.css";
 import "./assets/main.css";
 

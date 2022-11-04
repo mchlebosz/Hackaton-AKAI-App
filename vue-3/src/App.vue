@@ -1,6 +1,15 @@
 <script setup>
 import HelloWorld from "./components/HelloWorld.vue";
 import TheWelcome from "./components/TheWelcome.vue";
+
+import { defineProps, reactive } from "vue";
+import { MDBBtn } from "mdb-vue-ui-kit";
+
+defineProps({
+  msg: String,
+});
+
+const state = reactive({ count: 0 });
 </script>
 
 <template>
@@ -16,6 +25,9 @@ import TheWelcome from "./components/TheWelcome.vue";
     <div class="wrapper">
       <HelloWorld msg="You did it you wobly dobly do!" />
     </div>
+    <MDBBtn color="primary" class="mb-3" @click="state.count++">
+      count is: {{ state.count }}
+    </MDBBtn>
   </header>
 
   <main>
