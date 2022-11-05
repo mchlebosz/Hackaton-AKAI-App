@@ -3,7 +3,7 @@ import App from "./App.vue";
 
 import "mdb-vue-ui-kit/css/mdb.min.css";
 
-import "bootstrap/dist/css/bootstrap.css";
+
 import "./assets/main.css";
 
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -33,4 +33,3 @@ Fontawesome usage:
 
 createApp(App).component("fa-icon", FontAwesomeIcon).mount("#app");
 
-import "bootstrap/dist/js/bootstrap.js";
