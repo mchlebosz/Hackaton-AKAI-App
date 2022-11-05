@@ -101,7 +101,7 @@ export default {
         const token = this.getCookie('token');
         console.log(token);
         console.log(this.ip+'/panic');
-        axios.post(this.ip+'/panic', {
+        axios.post(this.ip+'/panic', {},{
             headers: {
                 Authorization: token
             }
