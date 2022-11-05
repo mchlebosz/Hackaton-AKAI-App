@@ -18,6 +18,7 @@ import { registerPlugins } from '@/plugins'
 import vuetify from './plugins/vuetify'
 const app = createApp(App)
 
+app.config.globalProperties.$serverIP = 'https://e503-150-254-4-72.eu.ngrok.io/api';
 
 registerPlugins(app)
 
