@@ -3,7 +3,7 @@
     <LogInModule @credentials="loadCredentials"/>
   </div>
   <div :style="{display: authPage? 'block' : 'none'}">
-    <LogInAuth ></LogInAuth>
+    <LogInAuth @auth-pin="validateAuth"></LogInAuth>
   </div>
     <div class="response">{{info}}</div>
 
@@ -17,6 +17,7 @@ import LogInAuth from '@/components/loginpage/LogInAuth.vue'
 
 
 
+
   export default {
     components: {
     LogInModule,
@@ -25,10 +26,13 @@ import LogInAuth from '@/components/loginpage/LogInAuth.vue'
     data () {
       return {
         authPage: false,
-        inputLogin: null,
+        inputEmail: null,
         inputPassword: null,
-        ip: 'https://04ba-150-254-4-72.eu.ngrok.io/api',
+        inputAuthPin: null,
+        authKey: null,
+        ip: 'https://e503-150-254-4-72.eu.ngrok.io/api',
         info: 'response',
+        authResponse: null
 
       }
     },
@@ -45,23 +49,22 @@ import LogInAuth from '@/components/loginpage/LogInAuth.vue'
        loadCredentials(login, password) {
         //if not empty
         if (login != null && password != null) {
-        this.inputLogin = login;
+        this.inputEmail = login;
         this.inputPassword = password;
         try {
 
       axios.post(this.ip+'/account/login', {
-          Email: this.inputLogin,
+          Email: this.inputEmail,
           Password: this.inputPassword
         })
     .then((response) => {
       this.info = response.data;
       if (response.data.startsWith("Bearer")) {
         this.setCookie('token', response.data, 1);
-        this.$router.push('/UserPage');
+        this.$router.push('/userpage');
       } else {
         this.authPage = true;
-        this.setErrorMessage("Goto2FA");
-
+        this.authKey = response.data;
       }
       })
       }
@@ -69,6 +72,30 @@ import LogInAuth from '@/components/loginpage/LogInAuth.vue'
       }
     }
     },
+    validateAuth(pin){
+      this.inputAuthPin = pin;
+      this.validate2FA()
+    },
+    validate2FA() {
+        axios
+      .post(this.ip+'/account/login/2fa',{
+        Email: this.inputEmail,
+        Password: this.inputPassword,
+        Pin: this.inputAuthPin,
+        Key : this.authKey
+
+      })
+      .then((response) => {(
+        this.authResponse = response)
+        console.log(response)
+        if (response.data.startsWith("Bearer")) {
+          this.setCookie('token', response.data, 1);
+          this.$router.push('/userpage');
+        } else {
+          this.setErrorMessage(response.data);
+        }
+      })
+    }
   },
   mounted() {
     console.log('mounted')
@@ -80,6 +107,14 @@ import LogInAuth from '@/components/loginpage/LogInAuth.vue'
       this.setErrorMessage('Zły email lub hasło')
     }
     });
+  },
+  watch: {
+    info: function(newVal, oldVal) { // watch it
+          console.log('Prop changed: ', newVal, ' | was: ', oldVal)
+          console.log(oldVal)
+          console.log(newVal)
+
+        }
   }
 }
 </script>

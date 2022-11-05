@@ -123,7 +123,7 @@ import axios from 'axios'
         inputPassword: 'Hasło1234',
         inputRepeatPassword: 'Powtórz hasło',
         inputAuthPin: 'Wpisz kod',
-        ip: 'https://04ba-150-254-4-72.eu.ngrok.io/api',
+        ip: 'https://e503-150-254-4-72.eu.ngrok.io/api',
 
       }
     },

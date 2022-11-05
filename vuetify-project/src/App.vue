@@ -1,6 +1,7 @@
 <template>
   <v-app>
     <Navigation></Navigation>
+    <div class="dist"></div>
     <router-view></router-view>
       <!-- <Footer ></Footer> -->
   </v-app>
@@ -14,6 +15,9 @@
 </script>
 
 <style lang="scss">
+div.dist{
+  margin-top: 200px;
+}
 
 
 

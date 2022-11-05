@@ -1,5 +1,5 @@
 <template>
-<v-navigation-drawer v-model="drawer" location="right"  >
+<v-navigation-drawer v-model="drawer" location="left"  >
     <v-btn
           rounded="pill"
             color="secondary"
@@ -57,14 +57,14 @@
     <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
     <v-toolbar-title><router-link to="/">OK Way</router-link> </v-toolbar-title>
-    
-    
-    
+
+
+
   </v-app-bar>
 </template>
 <script>
   export default {
     data: () => ({ drawer: null }),
   }
-  
+
 </script>
