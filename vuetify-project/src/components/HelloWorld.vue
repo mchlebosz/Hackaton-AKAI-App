@@ -16,7 +16,7 @@
       <v-row class="d-flex align-center justify-center">
         <v-col cols="auto">
           <v-btn
-            href="https://next.vuetifyjs.com/components/all/"
+            href="#"
             min-width="164"
             rel="noopener noreferrer"
             target="_blank"
@@ -36,7 +36,7 @@
           <v-btn
           rounded="pill"
             color="accent2"
-            href="https://next.vuetifyjs.com/introduction/why-vuetify/#feature-guides"
+            href="#"
             min-width="228"
             rel="noopener noreferrer"
             size="x-large"
@@ -70,6 +70,7 @@
             Get Started
           </v-btn>
         </v-col>
+        <ThemeChangerVue></ThemeChangerVue>
 
         <v-col cols="auto">
           <v-btn
@@ -94,5 +95,8 @@
 </template>
 
 <script setup>
+import ThemeChangerVue from './ThemeChanger.vue';
   //
 </script>
+
+<style lang="scss"></style>
