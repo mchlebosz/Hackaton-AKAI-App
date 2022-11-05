@@ -4,6 +4,7 @@ import About from '@/views/About.vue'
 import Login from '@/views/Login.vue'
 import Register from '@/views/Register.vue'
 import Donation from '@/views/Donation.vue'
+import Recruitment from '@/views/Recruitment.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -13,6 +14,7 @@ const router = createRouter({
     { path: '/login', name: Login , component: Login },
     { path: '/register', name: Register , component: Register },
     { path: '/donation', name: Donation , component: Donation },
+    { path: '/recruitment', name: Recruitment, component: Recruitment}
   ]
 })
 

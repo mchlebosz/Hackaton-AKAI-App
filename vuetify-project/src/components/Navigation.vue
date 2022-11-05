@@ -3,7 +3,7 @@
     <v-btn
           rounded="pill"
             color="secondary"
-            href="#"
+            href="donation()"
             min-width="228"
             rel="noopener noreferrer"
             size="x-large"
@@ -15,7 +15,7 @@
               start
             />
 
-            Get Started
+            <v-toolbar-title><router-link to="/donation">Donation</router-link> </v-toolbar-title>
           </v-btn>
           <v-btn
           rounded="pill"
@@ -32,12 +32,12 @@
               start
             />
 
-            Get Started
+            <v-toolbar-title><router-link to="/about">About Us</router-link> </v-toolbar-title>
           </v-btn>
           <v-btn
           rounded="pill"
             color="secondary"
-            href="#"
+            href="recr()"
             min-width="228"
             rel="noopener noreferrer"
             size="x-large"
@@ -49,7 +49,7 @@
               start
             />
 
-            Get Started
+            <v-toolbar-title><router-link to="/recruitment">Work With Us</router-link> </v-toolbar-title>
           </v-btn>
   </v-navigation-drawer>
 
@@ -57,10 +57,14 @@
     <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
     <v-toolbar-title><router-link to="/">OK Way</router-link> </v-toolbar-title>
+    
+    
+    
   </v-app-bar>
 </template>
 <script>
   export default {
     data: () => ({ drawer: null }),
   }
+  
 </script>
