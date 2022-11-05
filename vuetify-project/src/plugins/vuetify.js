@@ -22,23 +22,26 @@ export default createVuetify({
       dark: {
         colors: {
           background: "#282828",
-          primary: "#282828", // #E53935
-          secondary: "#F2F2F2", // #FFCDD2
-          accent1: "#D0BCFF",
-          accent2: "#381E72",
-          error: '#FF5252',
+          primary: "#F2F2F2", // #FFCDD2
+          secondary: "#D0BCFF",
+          accent: "#381E72",
+          error: '#F2B8B5',
           info: '#2196F3',
-          success: '#4CAF50',
+          success: '#94D48F',
           warning: '#FFC107',
         }
       },
       light: {
         colors: {
           background: "#F2F2F2",
-          primary: "#F2F2F2", // #E53935
-          secondary: "#282828", // #FFCDD2
-          accent1: "#D0BCFF",
-          accent2: "#381E72"
+          primary: "#282828", // #FFCDD2
+          secondary: "#D0BCFF",
+          accent: "#381E72",
+          error: '#F2B8B5',
+          info: '#2196F3',
+          success: '#94D48F',
+          warning: '#FFC107',
+
         }
       },
     },

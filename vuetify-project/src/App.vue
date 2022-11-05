@@ -12,10 +12,7 @@
 </script>
 
 <style lang="scss">
- @use './settings';
+@use './scss/main';
 
-.my-button {
-  //height: settings.$button-height;
-}
 
 </style>

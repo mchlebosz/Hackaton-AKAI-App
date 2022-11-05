@@ -35,7 +35,7 @@
         <v-col cols="auto">
           <v-btn
           rounded="pill"
-            color="accent2"
+            color="secondary"
             href="#"
             min-width="228"
             rel="noopener noreferrer"
@@ -54,7 +54,7 @@
           <v-btn
           rounded="pill"
           variant="outlined"
-            color="accent1"
+            color="accent"
             href="https://next.vuetifyjs.com/introduction/why-vuetify/#feature-guides"
             min-width="228"
             rel="noopener noreferrer"
