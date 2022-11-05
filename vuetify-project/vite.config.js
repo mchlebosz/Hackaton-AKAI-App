@@ -14,6 +14,9 @@ export default defineConfig({
     vuetify({
       //styles: { configFile: 'src/settings.scss' },
       autoImport: true,
+      customVariables: ['~/src/scss/variables.scss'],
+      treeShake: true,
+      defaultAssets: false
     }),
   ],
   define: { 'process.env': {} },

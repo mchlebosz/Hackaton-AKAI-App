@@ -1,18 +1,20 @@
 <template>
   <v-app>
-    <v-main>
-      <button class="my-button">Button</button>
-      <HelloWorld />
-    </v-main>
+    <Navigation></Navigation>
+    <router-view></router-view>
+      <!-- <Footer ></Footer> -->
   </v-app>
 </template>
 
 <script setup>
-  import HelloWorld from '@/components/HelloWorld.vue'
+  //import HomepageVue from '@/views/Homepage.vue';
+  import Navigation from '@/components/Navigation.vue';
+  import Footer from '@/components/Footer.vue';
+  //import Login from '@/views/Login.vue';
 </script>
 
 <style lang="scss">
-@use './scss/main';
+
 
 
 </style>

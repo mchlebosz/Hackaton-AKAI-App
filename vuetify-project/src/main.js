@@ -11,6 +11,7 @@ import './scss/main.scss'
 
 // Composables
 import { createApp } from 'vue'
+import router from './router'
 
 // Plugins
 import { registerPlugins } from '@/plugins'
@@ -20,5 +21,5 @@ const app = createApp(App)
 registerPlugins(app)
 
 app
-  .use(vuetify)
+  .use(vuetify).use(router)
   .mount('#app')
