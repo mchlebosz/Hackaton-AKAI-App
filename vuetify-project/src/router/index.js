@@ -5,6 +5,7 @@ import Login from '@/views/Login.vue'
 import Register from '@/views/Register.vue'
 import Donation from '@/views/Donation.vue'
 import Recruitment from '@/views/Recruitment.vue'
+import UserPage from '@/views/UserPage.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -15,6 +16,7 @@ const router = createRouter({
     { path: '/register', name: Register , component: Register },
     { path: '/donation', name: Donation , component: Donation },
     { path: '/recruitment', name: Recruitment, component: Recruitment}
+    { path: '/userpage', name: UserPage, component: UserPage}
   ]
 })
 

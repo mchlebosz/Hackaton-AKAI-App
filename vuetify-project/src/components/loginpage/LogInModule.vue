@@ -8,8 +8,8 @@
           sm="6"
         >
     <v-text-field
-            v-model="inputLogin"
-            label="Login"
+            v-model="inputEmail"
+            label="Email"
             outlined
             clearable
             dark
@@ -17,7 +17,7 @@
             filled
             bg-color="primary"
             color="secondary"
-            :error-messages="!errorPass[0] ? errorMessage: ''"
+            :error-messages="errorMessages[0]"
           ></v-text-field>
           <v-text-field
             v-model="inputPassword"
@@ -30,7 +30,7 @@
             type="password"
             name="password"
             label="Hasło"
-            :error-messages="!errorPass[1] ? errorMessage: ''"
+            :error-messages="errorMessages[1]"
           ></v-text-field>
         </v-col>
       </v-row>
@@ -46,32 +46,39 @@
     emits: ['credentials'],
     data () {
       return {
-        inputLogin: null,
+        inputEmail: null,
         inputPassword: null,
         ip: 'https://04ba-150-254-4-72.eu.ngrok.io/api',
         info: 'response',
-        errorMessage: "Pole nie może być puste",
+        errorMessages: ["", ""],
         errorPass: [true , true],
         loading: false,
       }
     },
     methods: {
       validateLogIn() {
-        if (this.inputLogin == null ){
-            this.errorPass[0] = false;
+        if (this.inputEmail == null ){
+            this.errorMessages[0] = "Pole nie może być puste"
         }
         else{
-            this.errorPass[0] = true;
+            this.errorMessages[0] = ""
+        }
+        //email validation
+        if (this.inputEmail != null && this.inputEmail.includes("@") && this.inputEmail.includes(".")){
+            this.errorMessages[0] = ""
+        }
+        else{
+            this.errorMessages[0] = "Niepoprawny email"
         }
         if (this.inputPassword == null ){
-            this.errorPass[1] = false;
+            this.errorMessages[1] = "Pole nie może być puste"
         }
         else{
-            this.errorPass[1] = true;
+            this.errorMessages[1] = ""
         }
-        if (this.inputLogin != null && this.inputPassword != null) {
+        if (this.inputEmail != null && this.inputPassword != null && this.inputEmail.includes("@") && this.inputEmail.includes(".")) {
             this.loading = true;
-            this.$emit('credentials', this.inputLogin, this.inputPassword);
+            this.$emit('credentials', this.inputEmail, this.inputPassword);
 
         }
     }

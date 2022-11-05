@@ -499,6 +499,11 @@
   "resolved" "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz"
   "version" "1.0.0"
 
+"tiny-cookie@^1.0":
+  "integrity" "sha512-4KJ21HYTNumxnHvCbLrtrrhSwtWXzpmaRJIUg4biBii5AiSe2izod5bauXiiQxVuf2Fta57U2DTW1Fa4/6Cmgw=="
+  "resolved" "https://registry.npmjs.org/tiny-cookie/-/tiny-cookie-1.0.1.tgz"
+  "version" "1.0.1"
+
 "to-regex-range@^5.0.1":
   "integrity" "sha512-65P7iz6X5yEr1cwcgvQxbbIw7Uk3gOy5dIdtZ4rDveLqhrdJP+Li/Hx6tyK0NEb+2GCyneCMJiGqrADCSNk8sQ=="
   "resolved" "https://registry.npmjs.org/to-regex-range/-/to-regex-range-5.0.1.tgz"
@@ -531,6 +536,18 @@
     "rollup" "^2.79.1"
   optionalDependencies:
     "fsevents" "~2.3.2"
+
+"vue-cookie@^1.1.4":
+  "integrity" "sha512-lxWIzmUTCVra0H7YPbNpYx0wbTQThV+n7ueUOcqtK8dlckmfB8fcyf4OEiRuQUd7iiVub2T3IDlWiisEM5Ku0Q=="
+  "resolved" "https://registry.npmjs.org/vue-cookie/-/vue-cookie-1.1.4.tgz"
+  "version" "1.1.4"
+  dependencies:
+    "tiny-cookie" "^1.0"
+
+"vue-cookies@^1.8.2":
+  "integrity" "sha512-+NfoC5l+7ybuVwpnqsf52qndnoYMjEb4EFhX4/j9RzzQP00dNzuJELsWuW2p8omNUzNlSgWGVyyWoOeJr347tw=="
+  "resolved" "https://registry.npmjs.org/vue-cookies/-/vue-cookies-1.8.2.tgz"
+  "version" "1.8.2"
 
 "vue-router@^4.1.6":
   "integrity" "sha512-DYWYwsG6xNPmLq/FmZn8Ip+qrhFEzA14EI12MsMgVxvHFDYvlr4NXpVF5hrRH1wVcDP8fGi5F4rxuJSl8/r+EQ=="
