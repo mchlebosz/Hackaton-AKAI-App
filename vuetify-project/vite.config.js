@@ -12,9 +12,7 @@ export default defineConfig({
     vue(),
     // https://github.com/vuetifyjs/vuetify-loader/tree/next/packages/vite-plugin
     vuetify({
-      //styles: { configFile: 'src/settings.scss' },
       autoImport: true,
-      customVariables: ['~/src/scss/variables.scss'],
       treeShake: true,
       defaultAssets: false
     }),
