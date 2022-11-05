@@ -1,18 +1,21 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
-import TheWelcome from "./components/TheWelcome.vue";
+// import HelloWorld from "./components/HelloWorld.vue";
+// import TheWelcome from "./components/TheWelcome.vue";
+import BaselineModuleVue from "./components/BaselineModule.vue";
+//import InboxContainer from "./components/InboxContainer.vue";
 
-import { defineProps, reactive } from "vue";
-import { MDBBtn } from "mdb-vue-ui-kit";
+// import { defineProps, reactive } from "vue";
+// //import { MDBBtn } from "mdb-vue-ui-kit";
 
-defineProps({
-  msg: String,
-});
+// defineProps({
+//   msg: String,
+// });
 
-const state = reactive({ count: 0 });
+// const state = reactive({ count: 0 });
 </script>
 
-<template>
+<!-- <template>
+  <BaselineModuleVue />
   <header>
     <img
       alt="Vue logo"
@@ -33,6 +36,11 @@ const state = reactive({ count: 0 });
   <main>
     <TheWelcome />
   </main>
+</template> -->
+
+<template>
+  <!-- <InboxContainer /> -->
+  <BaselineModuleVue />
 </template>
 
 <style lang="scss" scoped>

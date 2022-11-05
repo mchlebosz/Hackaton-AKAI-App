@@ -1,10 +1,10 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-
+//import "../src/sass/main.scss";
 import "mdb-vue-ui-kit/css/mdb.min.css";
 
-
 import "./assets/main.css";
+import "./sass/main.scss";
 
 import "bootstrap-icons/font/bootstrap-icons.css";
 /*
@@ -31,5 +31,15 @@ Fontawesome usage:
 <fa-icon icon="fa-solid fa-user-secret" />
 */
 
-createApp(App).component("fa-icon", FontAwesomeIcon).mount("#app");
+// Vuetify
+import "vuetify/styles";
+import { createVuetify } from "vuetify";
+import * as components from "vuetify/components";
+import * as directives from "vuetify/directives";
 
+const vuetify = createVuetify({
+  components,
+  directives,
+});
+
+createApp(App).use(vuetify).component("fa-icon", FontAwesomeIcon).mount("#app");
