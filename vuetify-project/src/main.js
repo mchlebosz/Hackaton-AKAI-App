@@ -14,7 +14,6 @@ import { createApp } from 'vue'
 import { registerPlugins } from '@/plugins'
 import vuetify from './plugins/vuetify'
 import './scss/main.scss'
-
 const app = createApp(App)
 
 registerPlugins(app)
