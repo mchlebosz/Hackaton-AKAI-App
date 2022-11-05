@@ -28,7 +28,7 @@ export default {
   name: 'UserPage',
   data: () => ({
     role: null,
-    ip: "https://e503-150-254-4-72.eu.ngrok.io/api"
+    ip: "http://localhost:5000/api"
   }),
   methods: {
     sendPin() {

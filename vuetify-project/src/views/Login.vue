@@ -30,7 +30,7 @@ import LogInAuth from '@/components/loginpage/LogInAuth.vue'
         inputPassword: null,
         inputAuthPin: null,
         authKey: null,
-        ip: 'https://e503-150-254-4-72.eu.ngrok.io/api',
+        ip: 'http://localhost:5000/api',
         info: 'response',
         authResponse: null
 

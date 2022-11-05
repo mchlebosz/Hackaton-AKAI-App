@@ -48,7 +48,7 @@
       return {
         inputEmail: null,
         inputPassword: null,
-        ip: 'https://04ba-150-254-4-72.eu.ngrok.io/api',
+        ip: 'http://localhost:5000/api',
         info: 'response',
         errorMessages: ["", ""],
         errorPass: [true , true],
