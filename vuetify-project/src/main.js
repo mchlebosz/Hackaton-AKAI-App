@@ -13,6 +13,7 @@ import { createApp } from 'vue'
 // Plugins
 import { registerPlugins } from '@/plugins'
 import vuetify from './plugins/vuetify'
+import 'vuetify/styles'
 import './scss/main.scss'
 const app = createApp(App)
 
